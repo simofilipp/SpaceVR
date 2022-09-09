@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
   AppSettings:
-    AppIdRealtime: 
+    AppIdRealtime: ff997bfa-eba4-45e8-9dab-5b75a877b87a
     AppIdFusion: 
     AppIdChat: 
-    AppIdVoice: 
+    AppIdVoice: ff997bfa-eba4-45e8-9dab-5b75a877b87a
     AppVersion: 
     UseNameServer: 1
     FixedRegion: 
@@ -42,6 +42,11 @@ MonoBehaviour:
   - CantHearYou
   - ChangeColour
   - HeresWhy
+  - RPC_LoadNewAvatar
+  - RPC_RecieveStreamData
+  - RPC_SaveAssetPath
+  - RPC_SetKinematic
+  - RPC_SetOculusID
   DisableAutoOpenWizard: 1
-  ShowSettings: 0
+  ShowSettings: 1
   DevRegionSetOnce: 0
