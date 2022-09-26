@@ -22,6 +22,7 @@
 #define OVR_VERTEX_TEXCOORD_FIELD_NAME v_UVCoord1
 #define OVR_VERTEX_COLOR_FIELD_NAME v_Color
 #define OVR_VERTEX_ORMT_FIELD_NAME v_ORMT
+#include "UnityCG.cginc"
 #include "../../../../Scripts/ShaderUtils/AvatarCustomTypes.cginc"
 
 #include "../../../../Scripts/ShaderUtils/AvatarCustom.cginc"

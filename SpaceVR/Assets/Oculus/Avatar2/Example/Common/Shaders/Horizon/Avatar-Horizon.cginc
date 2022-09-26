@@ -1,4 +1,5 @@
-﻿#include "../../../../Scripts/ShaderUtils/AvatarCustom.cginc"
+﻿#include "UnityCG.cginc"
+#include "../../../../Scripts/ShaderUtils/AvatarCustom.cginc"
 #include "AvatarCommon/AvatarShaderFramework.cginc"
 #include "AvatarCommon/AvatarPropertiesMap.cginc"
 

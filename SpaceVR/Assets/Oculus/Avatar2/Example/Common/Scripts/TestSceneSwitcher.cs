@@ -1,3 +1,7 @@
+#if USING_XR_MANAGEMENT && USING_XR_SDK_OCULUS
+#define USING_XR_SDK
+#endif
+
 using Oculus.Avatar2;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,6 +16,7 @@ using UnityEngine.SceneManagement;
  */
 public class TestSceneSwitcher : MonoBehaviour
 {
+#if USING_XR_SDK
     [System.Serializable]
     public struct InputMask
     {
@@ -26,6 +31,7 @@ public class TestSceneSwitcher : MonoBehaviour
     [SerializeField]
     private InputMask _prevSceneInput = new InputMask
     { controllerMask = OVRInput.Controller.LTouch, buttonMask = OVRInput.Button.One };
+#endif
 
     private void Awake()
     {
@@ -41,6 +47,7 @@ public class TestSceneSwitcher : MonoBehaviour
     {
         int sceneChange = 0;
 
+#if USING_XR_SDK
         if (OVRInput.GetActiveController() != OVRInput.Controller.Hands)
         {
             if (OVRInput.GetDown(_nextSceneInput.buttonMask, _nextSceneInput.controllerMask))
@@ -52,7 +59,7 @@ public class TestSceneSwitcher : MonoBehaviour
                 sceneChange = -1;
             }
         }
-
+#endif
         if (sceneChange != 0)
         {
             // Clean up current scene

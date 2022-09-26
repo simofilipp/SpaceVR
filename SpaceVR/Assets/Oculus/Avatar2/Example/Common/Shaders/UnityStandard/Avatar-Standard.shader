@@ -82,6 +82,8 @@ Shader "Avatar/Standard"
             #pragma shader_feature_local _PARALLAXMAP
 
             #pragma target 3.5 // necessary for use of SV_VertexID
+            #include "UnityInstancing.cginc"
+            #include "UnityCG.cginc"
             #include "../../../../Scripts/ShaderUtils/AvatarCustom.cginc"
 
             #pragma multi_compile_fwdbase
@@ -121,6 +123,8 @@ Shader "Avatar/Standard"
             #pragma shader_feature_local _PARALLAXMAP
 
             #pragma target 3.5 // necessary for use of SV_VertexID
+            #include "UnityInstancing.cginc"
+            #include "UnityCG.cginc"
             #include "../../../../Scripts/ShaderUtils/AvatarCustom.cginc"
 
             #pragma multi_compile_fwdadd_fullshadows
@@ -157,6 +161,8 @@ Shader "Avatar/Standard"
             //#pragma multi_compile _ LOD_FADE_CROSSFADE
 
             #pragma target 3.5 // necessary for use of SV_VertexID
+            #include "UnityInstancing.cginc"
+            #include "UnityCG.cginc"
             #include "../../../../Scripts/ShaderUtils/AvatarCustom.cginc"
 
             #pragma vertex vertShadowCaster
@@ -190,6 +196,8 @@ Shader "Avatar/Standard"
             #pragma shader_feature_local _PARALLAXMAP
 
             #pragma target 3.5 // necessary for use of SV_VertexID
+            #include "UnityInstancing.cginc"
+            #include "UnityCG.cginc"
             #include "../../../../Scripts/ShaderUtils/AvatarCustom.cginc"
 
             #pragma multi_compile_prepassfinal
@@ -227,6 +235,8 @@ Shader "Avatar/Standard"
             #pragma shader_feature EDITOR_VISUALIZATION
 
             #pragma target 3.5 // necessary for use of SV_VertexID
+            #include "UnityInstancing.cginc"
+            #include "UnityCG.cginc"
             #include "../../../../Scripts/ShaderUtils/AvatarCustom.cginc"
 
             #include "UnityStandardMeta.cginc"
@@ -262,6 +272,8 @@ Shader "Avatar/Standard"
             // SM2.0: NOT SUPPORTED shader_feature_local _PARALLAXMAP
 
             #pragma target 3.5 // necessary for use of SV_VertexID
+            #include "UnityInstancing.cginc"
+            #include "UnityCG.cginc"
             #include "../../../../Scripts/ShaderUtils/AvatarCustom.cginc"
 
             #pragma skip_variants SHADOWS_SOFT DIRLIGHTMAP_COMBINED
@@ -298,6 +310,8 @@ Shader "Avatar/Standard"
             #pragma skip_variants SHADOWS_SOFT
 
             #pragma target 3.5 // necessary for use of SV_VertexID
+            #include "UnityInstancing.cginc"
+            #include "UnityCG.cginc"
             #include "../../../../Scripts/ShaderUtils/AvatarCustom.cginc"
 
             #pragma multi_compile_fwdadd_fullshadows
@@ -358,6 +372,7 @@ Shader "Avatar/Standard"
             #pragma shader_feature EDITOR_VISUALIZATION
 
             #pragma target 3.5 // necessary for use of SV_VertexID
+            #include "UnityCG.cginc"
             #include "../../../../Scripts/ShaderUtils/AvatarCustom.cginc"
 
             #include "UnityStandardMeta.cginc"

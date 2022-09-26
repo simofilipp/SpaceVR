@@ -18,6 +18,7 @@
 #define OVR_VERTEX_VERT_ID_FIELD_NAME v_Id
 #define OVR_VERTEX_TEXCOORD_FIELD_NAME texcoord
 #define OVR_VERTEX_COLOR_FIELD_NAME color
+#include "UnityCG.cginc"
 #include "../../../../Scripts/ShaderUtils/AvatarCustomTypes.cginc"
 
 #include "../../../../Scripts/ShaderUtils/AvatarCustom.cginc"

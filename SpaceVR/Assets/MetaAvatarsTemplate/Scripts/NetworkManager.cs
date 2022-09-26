@@ -8,8 +8,11 @@ using System.Collections;
 //
 namespace Chiligames.MetaAvatarsPun
 {
+   
     public class NetworkManager : MonoBehaviourPunCallbacks
     {
+     
+        
         public static NetworkManager instance;
 
         private void Awake()
@@ -27,6 +30,7 @@ namespace Chiligames.MetaAvatarsPun
         private void Start()
         {
             ConnectToMaster();
+            
         }
 
         public void ConnectToMaster()
@@ -70,6 +74,8 @@ namespace Chiligames.MetaAvatarsPun
         {
             base.OnJoinedRoom();
             Debug.Log("Master: " + PhotonNetwork.IsMasterClient + " | Players In Room: " + PhotonNetwork.CurrentRoom.PlayerCount + " | RoomName: " + PhotonNetwork.CurrentRoom.Name + " Region: " + PhotonNetwork.CloudRegion);
+            //Vector3 posizioneTazza = new Vector3(this.transform.position.x, this.transform.position.y + 0.5f, this.transform.position.z);
+            //PhotonNetwork.Instantiate("SimpleGrab4ComboGrab", posizioneTazza, Quaternion.identity, 0);
         }
 
         public override void OnJoinRoomFailed(short returnCode, string message)

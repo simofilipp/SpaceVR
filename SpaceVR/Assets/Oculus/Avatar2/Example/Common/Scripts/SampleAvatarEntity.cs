@@ -1,9 +1,15 @@
+#if USING_XR_MANAGEMENT && USING_XR_SDK_OCULUS && !OVRPLUGIN_UNSUPPORTED_PLATFORM
+#define USING_XR_SDK
+#endif
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Oculus.Avatar2;
+#if USING_XR_SDK
 using Oculus.Platform;
+#endif
 using UnityEngine;
 using CAPI = Oculus.Avatar2.CAPI;
 #if UNITY_EDITOR
@@ -151,6 +157,7 @@ public class SampleAvatarEntity : OvrAvatarEntity
     #region Loading
     private IEnumerator LoadCdnAvatar()
     {
+#if USING_XR_SDK
         // Ensure OvrPlatform is Initialized
         if (OvrPlatformInit.status == OvrPlatformInitStatus.NotStarted)
         {
@@ -191,7 +198,7 @@ public class SampleAvatarEntity : OvrAvatarEntity
 
             while (!getUserIdComplete) { yield return null; }
         }
-
+#endif
         yield return LoadUserAvatar();
     }
 

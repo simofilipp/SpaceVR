@@ -21,6 +21,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using System;
 
 namespace Oculus.Interaction
 {
@@ -53,6 +54,17 @@ namespace Oculus.Interaction
         private ITransformer _activeTransformer = null;
         private ITransformer OneGrabTransformer;
         private ITransformer TwoGrabTransformer;
+
+
+
+        /// <summary>
+        /// New Actions for OVR added by Issimissimo
+        /// </summary>
+        /// 
+        public event Action OnBeginTransform;
+        public event Action OnEndTransform;
+
+
 
         protected override void Awake()
         {
@@ -154,6 +166,11 @@ namespace Oculus.Interaction
             }
 
             _activeTransformer.BeginTransform();
+
+            /// <summary>
+            /// Event
+            /// </summary>
+            if (OnBeginTransform != null) OnBeginTransform.Invoke();
         }
 
         private void UpdateTransform()
@@ -174,6 +191,11 @@ namespace Oculus.Interaction
             }
             _activeTransformer.EndTransform();
             _activeTransformer = null;
+
+            /// <summary>
+            /// Event
+            /// </summary>
+            if (OnEndTransform != null) OnEndTransform.Invoke();
         }
 
         #region Inject

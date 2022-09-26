@@ -158,6 +158,7 @@ Shader "Avatar/Khronos"
             // PRAGMAS: Pragmas cannot exist in cginc files so include them here
 
             // DEBUG_MODES: Must match the Properties specified above
+            
             // #pragma multi_compile __ DEBUG_BASECOLOR DEBUG_OCCLUSION DEBUG_ROUGHNESS DEBUG_METALLIC DEBUG_THICKNESS DEBUG_NORMAL DEBUG_NORMAL_MAP DEBUG_EMISSIVE DEBUG_VIEW DEBUG_PUNCTUAL DEBUG_PUNCTUAL_SPECULAR DEBUG_PUNCTUAL_DIFFUSE DEBUG_IBL DEBUG_IBL_SPECULAR DEBUG_IBL_DIFFUSE DEBUG_SH DEBUG_NO_TONE_MAP
             #define DEBUG_LIGHTING (defined(DEBUG_METALLIC) || defined(DEBUG_THICKNESS) || defined(DEBUG_ROUGHNESS) || defined(DEBUG_NORMAL) || defined(DEBUG_NORMAL_MAP) || defined(DEBUG_BASECOLOR) || defined(DEBUG_OCCLUSION) || defined(DEBUG_EMISSIVE) || defined(DEBUG_F0) || defined(DEBUG_ALPHA) || defined(DEBUG_VIEW) || defined(DEBUG_PUNCTUAL) || defined(DEBUG_PUNCTUAL_SPECULAR) || defined(DEBUG_PUNCTUAL_DIFFUSE) || defined(DEBUG_IBL) || defined(DEBUG_IBL_SPECULAR) || defined(DEBUG_IBL_DIFFUSE) || defined(DEBUG_SH) || defined(DEBUG_NO_TONE_MAP))
 
